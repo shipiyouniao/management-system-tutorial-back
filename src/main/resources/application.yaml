@@ -1,0 +1,21 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: manage
+  datasource:
+    url: jdbc:mysql://ip:port/database?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+    username: username
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+logging:
+  level:
+    root: info
+mybatis-plus:
+  mapper-locations: classpath:com/example/manage/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      # id为自增
+      id-type: auto
